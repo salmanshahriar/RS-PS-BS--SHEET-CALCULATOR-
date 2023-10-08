@@ -1,0 +1,326 @@
+<!--********************************************************************\\
+||                      [A JAVASCRIPT PROJECT]                          ||
+||**********************************************************************||
+||                                                                      ||
+|| #USED: HTML,CSS,JAVA-SCRIPT                                          ||
+|| #BY: SALMAN SHAHRIAR (LINKEDIN: www.linkedin.com/in/salman-shahriar) ||
+||                       (GITHUB: www.github.io/salmanshahriar)         ||
+||                                                                      ||
+||**********************************************************************//
+\**********************************************************************-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./verified-bot-developer.png" type="image/x-icon">
+    <title>Jorip To Gonda</title>
+<!-- css -->
+    <style>
+        body{
+            overflow: hidden;   
+            font-family: 'Courier New', Courier, monospace;
+            background-color: lightblue;
+            text-align: center;
+            user-select: none;
+        }
+        .container{
+            width: 340px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .flex{
+            display: flex;
+            align-items: center; 
+            justify-content: space-evenly;
+        }
+        h2{
+            font-weight: 900;
+            font-size: 27px;
+            border: 1px solid black;
+            padding: 7px 0 2px 0;
+            border-radius: 10px 10px 0 0;
+            margin: 0;
+            box-shadow: 1px 1px 1px black;
+            background-color: lightblue;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.494);
+        }
+        h3{
+            font-weight: 900;
+            font-size: 15px;
+           margin: 0 0 5px 0;
+        }
+        h4{
+            height: 15px;
+            margin: 0 auto;
+            font-weight: 900;
+            margin-bottom: 10px;
+            margin-top: -20px;
+            font-size: 13px;
+            width: 255px;
+
+        }
+        h5{
+            margin: 0px auto;
+            background-color: rgba(0, 0, 0, 0.761) ;
+            color: rgba(255, 255, 255, 0.887);
+            border-radius: 0 0 10px 10px;
+            width: 295px;
+            border: 1px solid black;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 600;
+        } 
+        .border{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 12px 20px 0px 20px;
+            margin-bottom: 0px;
+            box-shadow: 1px 1px 1px black;
+            background-color: lightcyan;
+        }
+        hr{
+           width: 250px;
+            border-radius: 20px;
+            border: 1px dashed rgba(0, 0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.898);
+        }
+        .sliderBtn:nth-child(1){
+            padding: 16px 25px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            transition: transform 0.3s;
+            border-radius: 50px;
+            border: none;
+            font-size: 20px;
+            font-weight: 700;
+            border: 1px solid #fff;
+        }
+        .sliderBtn:nth-child(2){
+            padding: 16px 25px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            transition: transform 0.3s;
+            border-radius: 50px;
+            border: none;
+            font-size: 20px;
+            font-weight: 700;
+            border: 1px solid #fff;
+        }
+        .sliderBtn:nth-child(3){
+            padding: 16px 25px;
+            cursor: pointer;
+            background-color: #fff;
+            transition: transform 0.3s;
+            border-radius: 50px;
+            border: none;
+            font-size: 20px;
+            font-weight: 700;
+            border: 1px solid #fff;
+        }
+        .sliderBtn.active{
+            background-color: aquamarine;
+            color: black;
+            border: 1px solid black;
+        }
+        .sliderBtnContainer{
+            display: flex;
+            overflow: hidden;
+            margin: 0px auto;
+            margin-bottom: 20px;
+            background-color: white;
+            width: 222px;
+            border-radius: 50px;
+            padding: 0;
+            border: 1px solid;
+            box-shadow: 1px 1px 1px black;
+        }
+        .resultDisplay{
+            height: 152px;
+            width: 296px;
+            margin: 0 auto;
+            background-color: lightcyan;
+            color: black;
+            padding-top: 8px;
+            margin-bottom: 10px;
+        }
+        .blueBorderBox{
+            padding: 24px 20px 20px 20px;
+            border-radius: 15px;
+            background-color:lightblue;
+            border: 1px solid black;
+        }
+        .bgNormal{
+            background-color: #fff;
+            border-radius: 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .pContainer{
+            margin-top: -20px;
+        }
+        .btnResult{   
+            background-color: aquamarine;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 10px 0 13px 0;
+            width: 260px;
+            cursor: pointer;
+            margin: 0px 0 25px 0;
+        }
+        input{
+            margin-bottom: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px 40px;
+            border-radius: 10px;
+            width: 175px;
+        }
+        input::placeholder{
+            width: 200px;
+        }
+        label{
+            margin-right: 120px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+<!-- Display section -->
+    <div class="container">
+        <div style="margin-bottom: 10px;" class="border">
+            <h2>JORIP TO GONDA</h2>
+            <h5>RS-PS-BS SHEET JORIP TO GONDA</h5>
+            <h3 style=" margin: 30px 0 5px 0;">Select Sheet Scale:</h3>
+            <div class="sliderBtnContainer">
+              <button class="sliderBtn" value="64">64</button>
+              <button class="sliderBtn" value="32">32</button>
+              <button class="sliderBtn" value="16">16</button>
+            </div>
+        </div>
+        <div class="resultDisplay border">
+            <h3>Result:</h3>
+            <div class="blueBorderBox">
+                <div class="bgNormal">
+                    <h4 id="inputDisplay"></h4>
+                    <br>
+                    <div class="pContainer">
+                        <p id="sixtyFourResultDisplay"></p>
+                        <p id="thirtyTwoResultDisplay"></p>
+                        <p id="sixteenResultDisplay">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border">
+            <div style="margin-top: 8px;">
+                <label for="">First number:</label>
+                <input id="firstJoripInput" type="number" placeholder="Enter length/width...">
+            </div>
+            <div>
+    
+                <label style="text-align: left;" for="">Second number:</label>
+                <input id="secondJoripInput" type="number" placeholder="Enter length/width...">
+            </div>
+            <button class="btnResult" id="btnResult">Enter</button>
+            </div>
+    </div>
+
+<!-- javascript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const firstJoripInput = document.getElementById('firstJoripInput');
+            const secondJoripInput = document.getElementById('secondJoripInput')
+            const sixtyFourResultDisplay = document.getElementById('sixtyFourResultDisplay');
+            const thirtyTwoResultDisplay = document.getElementById('thirtyTwoResultDisplay');
+            const sixteenResultDisplay = document.getElementById('sixteenResultDisplay');
+            const inputDisplay = document.getElementById('inputDisplay');
+            const storeData = document.getElementById('storeData');
+            const btnResult = document.getElementById('btnResult');
+            
+
+            // button active slider
+            const buttons = document.querySelectorAll('.sliderBtn');
+
+            function handleButtonClick(button){
+                buttons.forEach(b => b.classList.remove('active'));
+                button.classList.add('active');
+            }
+           
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    handleButtonClick(button);
+                        });   
+            });
+
+            const defaultButton = document.querySelector('.sliderBtn[value="16"]');
+            handleButtonClick(defaultButton);
+
+            // After Enter button click
+            btnResult.addEventListener('click', () => {
+                const activeButton = document.querySelector('.sliderBtn.active')
+                const sheetButtonValue = parseFloat(activeButton.value);
+                
+                
+                const newFirstJoripInput = parseFloat(firstJoripInput.value);
+                const newSecondJoripInput = parseFloat(secondJoripInput.value);
+
+                const isValidFirstJoripInput = /^-?\d+(\.\d+)?$/.test(newFirstJoripInput); 
+                firstJoripInput.value = ''; 
+                const isValidSecondJoripInput = /^-?\d+(\.\d+)?$/.test(newSecondJoripInput);
+                secondJoripInput.value = '';
+ 
+                if ((isValidFirstJoripInput && isValidSecondJoripInput)) {
+                   
+
+                    if(sheetButtonValue  === 64 ){
+                        inputDisplay.textContent = `Scale 64 (${newFirstJoripInput} & ${newSecondJoripInput})`
+                        
+                        const sixtyFourFirstJorip = newFirstJoripInput * 2.5;
+                        const sixtyFourSecondJorip = newSecondJoripInput * 2.5;
+                        const totalSixtyFourJorip = Math.min((sixtyFourFirstJorip * sixtyFourSecondJorip) / 864);
+                        sixtyFourResultDisplay.textContent = totalSixtyFourJorip;
+                        thirtyTwoResultDisplay.textContent = '';
+                        sixteenResultDisplay.textContent = '';
+                        return;
+                    }
+                    else if(sheetButtonValue  === 32 ){
+                        inputDisplay.textContent = `Scale 32 (${newFirstJoripInput} & ${newSecondJoripInput})`
+
+                        const thirtyTwoFirstJorip = newFirstJoripInput * 5;
+                        const thirtyTwoSecondJorip = newSecondJoripInput * 5;
+                        const totalThirtyTwoJorip = Math.min((thirtyTwoFirstJorip * thirtyTwoSecondJorip) / 864);
+                        thirtyTwoResultDisplay.textContent = totalThirtyTwoJorip;
+                        sixtyFourResultDisplay.textContent = '';
+                        sixteenResultDisplay.textContent = '';
+                        return;
+                    }
+                    else if(sheetButtonValue  === 16 ){
+                        inputDisplay.textContent = `Scale 16 (${newFirstJoripInput} & ${newSecondJoripInput})`
+
+                        const sixteenFirstJorip = newFirstJoripInput * 10;
+                        const sixteenSecondJorip = newSecondJoripInput * 10;
+                        const totalSixteenJorip = Math.min((sixteenFirstJorip * sixteenSecondJorip) / 864);  
+                        sixteenResultDisplay.textContent = totalSixteenJorip;
+                        sixtyFourResultDisplay.textContent = '';
+                        thirtyTwoResultDisplay.textContent = '';
+                        return;
+                    }
+                }
+                else{
+                    alert('please provide a number!')
+                    }
+            });
+            
+        });
+    </script>
+</body>
+</html>
